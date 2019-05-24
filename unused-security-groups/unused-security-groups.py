@@ -1,4 +1,5 @@
 '''
+
 unused-security-groups.py: List security groups within a region that 
 are not associated with any EC2 instances
 
@@ -8,6 +9,11 @@ us-east-1, but can set using environment variable AWS_REGION.
 
 The output lists the unused security groups by name and security 
 group ID.
+
+Requires boto3 and tabulate packages. Or run this:
+
+    pip install -r requirements.txt
+
 '''
 
 import os
