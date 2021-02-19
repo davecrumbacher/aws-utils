@@ -21,6 +21,7 @@ compliant_resources = []
 for resource in data['ResourceTagMappingList']:
     if len(resource['Tags']) == 0:
         untagged_resources.append(resource)
+        continue
     tags = [t['Key'] for t in resource['Tags']]
     is_compliant = all(t in tags for t in REQUIRED_TAGS)
     if is_compliant:
