@@ -9,6 +9,10 @@ REQUIRED_TAGS = (
     'aws:cloudformation:logical-id'
 )
 
+print('\nSEARCHING FOR THESE TAGS:\n')
+for tag in REQUIRED_TAGS:
+    print(tag)
+
 raw_data = ''
 for line in sys.stdin:
     raw_data += line
